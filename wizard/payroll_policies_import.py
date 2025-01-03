@@ -90,6 +90,14 @@ class PayrollPoliciesImport(models.TransientModel):
                  
             newEntry.write({'line_ids': line_data})
 
+            return {
+                'type': 'ir.actions.act_window',
+                'name': 'Journal Entry',
+                'res_model': 'account.move',
+                'view_mode': 'form',
+                'res_id': newEntry.id,  # ID of the newly created record
+                'target': 'current',
+            }
 
         except Exception as e:
             raise UserError(f"Error processing the file: {e}")

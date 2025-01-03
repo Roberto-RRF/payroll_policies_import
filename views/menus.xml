@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem 
+        id="menu_payroll_policies_import" 
+        parent="account.menu_finance_entries_actions" 
+        action="action_payroll_policies_import_wizard" 
+        sequence="1" name="Importar Póliza Nómina" 
+    />
+</odoo>
